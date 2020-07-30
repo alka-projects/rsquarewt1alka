@@ -1,0 +1,166 @@
+{%extends "rsquare/home.html"%}
+{%load static%}
+{%block css_block%}
+ <!-- <link rel="stylesheet" href="{%static "rsquare/planning.css"%}"> -->
+{%endblock%}
+{% block child_block%}
+ <style media="screen">
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 230px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+     /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /* background-color: #bbb; */
+    /* color: black; */
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color:white;
+    /* color: skyblue; */
+    transform: rotateY(180deg);
+    border:1px solid skyblue;
+  }
+  .flip-card-back #p {
+    color:skyblue;
+    text-align:left;
+    padding-left:5%;
+    font-weight:bold;
+  }
+  #h4{
+    text-align:left;
+    padding-left:5%;
+    font-weight:bold;
+  }
+#row{
+  padding-top:5%;
+  padding-left:5%;
+}
+</style>
+<div class="row" id="row">
+  <div class="col-lg-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img style="height:150px; width:150px;" src="https://www.pinclipart.com/picdir/middle/567-5674702_smallgroupicon-transparent-small-group-icon-clipart.png" alt="Avatar" >
+<br><h4>Small bundle</h4>
+    </div>
+    <div class="flip-card-back container">
+    <div class="row">
+      <div class="col">
+        <a href="#">price</a>
+      </div>
+      <div class="col">
+      <a href="#"><img style="height:30px;" src="https://img.icons8.com/windows/24/000000/more.png"/></a>
+      </div>
+    </div>
+      <h4 id="h4">$ 20</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .</p>
+      <div class="row">
+        <div class="col">
+          <a href="#">learn more</a>
+        </div>
+        <div class="col">
+        <a href="#"><img  style="height:30px;" src="https://img.icons8.com/fluent/48/000000/shopping-cart.png"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img style="height:150px; width:150px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTR2SAUuHBOi9_uBQXBD_tg1uINONjpDPwKyA&usqp=CAU" alt="Avatar" >
+<br><h4>Medium bundle</h4>
+  </div>
+  <div class="flip-card-back container">
+  <div class="row">
+    <div class="col">
+      <a href="#">price</a>
+    </div>
+    <div class="col">
+    <a href="#"><img style="height:30px;" src="https://img.icons8.com/windows/24/000000/more.png"/></a>
+    </div>
+  </div>
+    <h4 id="h4">$ 20</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .</p>
+    <div class="row">
+      <div class="col">
+        <a href="#">learn more</a>
+      </div>
+      <div class="col">
+      <a href="#"><img  style="height:30px;" src="https://img.icons8.com/fluent/48/000000/shopping-cart.png"/></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img style="height:150px; width:150px;" src="https://img.freepik.com/free-vector/business-people-with-connection-icons_53876-66203.jpg?size=626&ext=jpg" alt="Avatar">
+<br><h4>Large bundle</h4>
+  </div>
+  <div class="flip-card-back container">
+  <div class="row">
+    <div class="col">
+      <a href="#">price</a>
+    </div>
+    <div class="col">
+    <a href="#"><img style="height:30px;" src="https://img.icons8.com/windows/24/000000/more.png"/></a>
+    </div>
+  </div>
+    <h4 id="h4">$ 20</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .</p>
+    <div class="row">
+      <div class="col">
+        <a href="#">learn more</a>
+      </div>
+      <div class="col">
+      <a href="#"><img  style="height:30px;" src="https://img.icons8.com/fluent/48/000000/shopping-cart.png"/></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+</div>
+{%endblock%}

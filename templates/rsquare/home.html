@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/home.css"%}">
+    {% block css_block%}
+    {%endblock%}
+    <title></title>
+  </head>
+    <body>
+
+      <div class="container" >
+        <center><h2 ><label for="customRange1" style="padding-top:5%; padding-bottom:3%;">Let's Build Something Great!</label></h2></center>
+    {%if  range %}
+    <input type="range" min="1" max="100" value="{{range}}" class="slider" id="myRange" href='#myRange' >
+{%else%}
+<input type="range" min="1" max="100" value="0" class="slider" id="myRange" href='#myRange' >
+{%endif%}
+</div>
+  <!-- <center> -->
+<div class="row" >
+<div class="col-lg-3" style="padding-left:9%">
+      <a class="btn btn-succes btn-lg" href='/range/0' style="animation-timimg-function:linear;" >initiation</a>
+  </div>
+<div class="col-lg-3" style="padding-left:8%">
+    <a class="btn btn-succes btn-lg" href='/range/34' style="animation-timimg-function:linear;"  >planning</a>
+  </div>
+  <div class="col-lg-3" style="padding-left:9%">
+    <a class="btn btn-succes btn-lg" href='/range/67' >execution</a>
+  </div>
+<div class="col-lg-3" style="padding-left:9%">
+    <a class="btn btn-succes btn-lg" href='/range/100' >closing</a>
+  </div>
+</div>
+ <!-- </center> -->
+{% block child_block%}
+<!-- <center>
+<div class="row" style="padding-top:10%; padding-left:18%; ">
+<div class="col-lg-3"  >
+    <img id="img" style="width:100px; height:100px;" src="https://www.sw-eng.ch/assets/images/requirements-icon.png" alt="">
+    <h5>Requirement Analysis</h5>
+  </div>
+<div class="col-lg-3" >
+  <img style="width:100px; height:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZOwE13n4oEvIwBKoQvscbnmDREScXEcPt5g&usqp=CAU" alt="">
+<h5>Project-spec documents</h5>
+  </div>
+  <div  class="col-lg-3"  >
+  <img style="width:100px; height:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgFUYvGkb3OW1vKC_BK2YrwN2YIY9LEMtxUA&usqp=CAU" alt="">
+<h5>Freelencer Search</h5>
+  </div>
+
+</div>
+
+</center> -->
+
+
+
+
+  {%endblock%}
+ </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ </html>
